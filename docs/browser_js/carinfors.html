@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     .navbar {
       background-color: #007bff;
@@ -48,13 +48,11 @@
 
   <!-- 검색창 -->
   <div class="container-fluid mt-4">
-    <div class="container-custom">
-      <form class="form-inline">
-        <div class="form-group mb-2" style="flex-grow: 1;">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 100%;">
-        </div>
-        <button class="btn btn-outline-primary ml-2" type="submit">Search</button>
-      </form>
+    <div class="container-custom d-flex">
+      <div class="form-group mb-2" style="flex-grow: 1;">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="width: 100%;" id="keydownEnter">
+      </div>
+      <button class="btn btn-outline-primary ml-2" type="button" onclick="carTableBody();">Search</button>
     </div>
   </div>
 
@@ -66,12 +64,13 @@
           <thead class="thead-light">
             <tr>
               <th>YEAR</th>
-              <th>CAR_NAME</th>
-              <th>CAR_INFOR_ID</th>
+              <th>CAR NAME</th>
+              <th>CAR INFOR_ID</th>
               <th>COMPANY_ID</th>
             </tr>
           </thead>
-          <tbody id = "carloops">
+          <tbody id = "carTableBody">
+            <!-- Empty -->
           </tbody>
         </table>
       </div>
@@ -84,7 +83,7 @@
       <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
           <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">이전</a>
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
           </li>
           <li class="page-item active" aria-current="page">
             <a class="page-link" href="#">1</a>
@@ -96,20 +95,21 @@
             <a class="page-link" href="#">3</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">다음</a>
+            <a class="page-link" href="#">Next</a>
           </li>
         </ul>
       </nav>
     </div>
   </div>
-  <footer class="footer">
+  <footer class="footer" >
     <div class="container-custom">
       <p>&copy; 2023 SKY CAR. All rights reserved.</p>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
-<script src="./js/carloops.js"></script>
+<!-- <script src="./js/carinforwithfunction.js"></script> -->
+<script src="./js/fetchs.js"></script>
 </html>
