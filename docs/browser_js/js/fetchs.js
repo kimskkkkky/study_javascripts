@@ -55,25 +55,19 @@ function fetchCarInforupdate(){
             console.log(erroMeg);
         });
     }
-    //자동차 정보 변경?
-    function fetchCarInforselectAll(){
-        let url = 'http://127.0.0.1:8080/selectAll/CI002';
+    // //자동차 정보 변경?
+    // function fetchCarInforselectAll(){
+    //     let url = 'http://127.0.0.1:8080/selectAll/CI002';
 
-        let request = fetch(url)
-            .then((result) => {
-                return result.json();
-            })
-            .then((data) => {
-                let outHtml = ``;
-                for (let car_hashmap of data) {   
-                  console.log(`YEAR: ${car_hashmap.YEAR}, CAR_NAME: ${car_hashmap.CAR_NAME}, CAR_INFOR_ID: ${car_hashmap.CAR_INFOR_ID}, COMPANY_ID: ${car_hashmap.COMPANY_ID}`);
-                  outHtml = `${outHtml}<tr><td>${car_hashmap.YEAR}</td><td>${car_hashmap.CAR_NAME}</td><td>${car_hashmap.CAR_INFOR_ID}</td><td>${car_hashmap.COMPANY_ID}</td></tr>`;
-                }
-                outHtml += ``; 
-                let carTableBody = document.querySelector('#carTableBody'); 
-                carTableBody.innerHTML = outHtml;
-            })
-            .catch(erroMeg => {
-                console.log(erroMeg);
-            });
-        }
+    //     let request = fetch(url)
+    //         .then((result) => {
+    //             return result.json();
+    //         })
+    //         .then((data) => {
+    //             console.log(data);
+    //             carTableBody(data);
+    //         })
+    //         .catch(erroMeg => {
+    //             console.log(erroMeg);
+    //         });
+    //     }
